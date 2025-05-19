@@ -1,0 +1,524 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D800E9FA-78D9-450D-A0BC-4837AB1734D1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StockManagment</RootNamespace>
+    <AssemblyName>StockManagment</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v24.1" />
+    <Reference Include="DevExpress.Charts.v24.1.Core, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.Desktop.v24.1" />
+    <Reference Include="DevExpress.Data.v24.1" />
+    <Reference Include="DevExpress.Office.v24.1.Core, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v24.1.Core, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v24.1.Core, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v24.1.Core" />
+    <Reference Include="DevExpress.RichEdit.v24.1.Core, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v24.1.Export, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v24.1" />
+    <Reference Include="DevExpress.Utils.v24.1.UI, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v24.1" />
+    <Reference Include="DevExpress.Sparkline.v24.1.Core" />
+    <Reference Include="DevExpress.XtraCharts.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v24.1" />
+    <Reference Include="DevExpress.Drawing.v24.1" />
+    <Reference Include="DevExpress.XtraGauges.v24.1.Core, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v24.1.Extensions, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\EnableDisableControlClass.cs" />
+    <Compile Include="Models\ItemClass.cs" />
+    <Compile Include="Models\PurchaseDeliveryClass.cs" />
+    <Compile Include="Models\PurchaseDeliveryDetail.cs" />
+    <Compile Include="Models\PurchaseOrderHead.cs" />
+    <Compile Include="Models\PurchaseRequestDetailModel.cs" />
+    <Compile Include="Models\PurchaseRequestHead.cs" />
+    <Compile Include="Models\StockCountHead.cs" />
+    <Compile Include="Models\StockRequestDetail.cs" />
+    <Compile Include="Models\StockRequisition.cs" />
+    <Compile Include="Models\StockRequisitionDeliveryDetail.cs" />
+    <Compile Include="Models\StockRequisitionDeliveryHead.cs" />
+    <Compile Include="Models\StockTransfertDetail.cs" />
+    <Compile Include="Models\StockTransferthead.cs" />
+    <Compile Include="Models\StockWasteDetail.cs" />
+    <Compile Include="Models\StockWasteHead.cs" />
+    <Compile Include="Models\TransactionHead.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="ProjectForms\ItemSuppliersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\ItemSuppliersForm.Designer.cs">
+      <DependentUpon>ItemSuppliersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\MainCategoryListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\MainCategoryListForm.designer.cs">
+      <DependentUpon>MainCategoryListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\ItemsListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\ItemsListForm.designer.cs">
+      <DependentUpon>ItemsListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\ItemsDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\ItemsDetailForm.designer.cs">
+      <DependentUpon>ItemsDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\MainForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\MainForm1.Designer.cs">
+      <DependentUpon>MainForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\PoListItemsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\PoListItemsForm.Designer.cs">
+      <DependentUpon>PoListItemsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\PurchaseApprovalListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\PurchaseApprovalListForm.Designer.cs">
+      <DependentUpon>PurchaseApprovalListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\PurchaseApproveForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\PurchaseApproveForm.Designer.cs">
+      <DependentUpon>PurchaseApproveForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\PurchaseDeliveryReceiveForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\PurchaseDeliveryReceiveForm.Designer.cs">
+      <DependentUpon>PurchaseDeliveryReceiveForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\PurchaseDeliveryReceiveFromOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\PurchaseDeliveryReceiveFromOrderForm.Designer.cs">
+      <DependentUpon>PurchaseDeliveryReceiveFromOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\PurchaseDeliveryReceiveListForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\PurchaseDeliveryReceiveListForm1.Designer.cs">
+      <DependentUpon>PurchaseDeliveryReceiveListForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\PurchaseDeliveryReceiveListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\PurchaseDeliveryReceiveListForm.Designer.cs">
+      <DependentUpon>PurchaseDeliveryReceiveListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\PurchaseOrderListForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\PurchaseOrderListForm1.Designer.cs">
+      <DependentUpon>PurchaseOrderListForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\PurchaseRequestApprovedListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\PurchaseRequestApprovedListForm.Designer.cs">
+      <DependentUpon>PurchaseRequestApprovedListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\PurchaseRequestListForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\PurchaseRequestListForm1.Designer.cs">
+      <DependentUpon>PurchaseRequestListForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\StockCountDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\StockCountDetailForm.Designer.cs">
+      <DependentUpon>StockCountDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\StockCountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\StockCountForm.Designer.cs">
+      <DependentUpon>StockCountForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\StockCountListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\StockCountListForm.Designer.cs">
+      <DependentUpon>StockCountListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\StockRequestDeliveryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\StockRequestDeliveryForm.Designer.cs">
+      <DependentUpon>StockRequestDeliveryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\StockRequestDeliveryListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\StockRequestDeliveryListForm.Designer.cs">
+      <DependentUpon>StockRequestDeliveryListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\StockWasteListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\StockWasteListForm.Designer.cs">
+      <DependentUpon>StockWasteListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\StockWasteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\StockWasteForm.Designer.cs">
+      <DependentUpon>StockWasteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\StockRequestListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\StockRequestListForm.Designer.cs">
+      <DependentUpon>StockRequestListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\StockRequestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\StockRequestForm.Designer.cs">
+      <DependentUpon>StockRequestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\WarehouseStockTransferListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\WarehouseStockTransferListForm.Designer.cs">
+      <DependentUpon>WarehouseStockTransferListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\WarehouseStockTransferForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\WarehouseStockTransferForm.Designer.cs">
+      <DependentUpon>WarehouseStockTransferForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\PurchaseReturnListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\PurchaseReturnListForm.Designer.cs">
+      <DependentUpon>PurchaseReturnListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\PurchaseReturnForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\PurchaseReturnForm.Designer.cs">
+      <DependentUpon>PurchaseReturnForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\PurchaseRequestListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\PurchaseRequestListForm.Designer.cs">
+      <DependentUpon>PurchaseRequestListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\PurchaseRequestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\PurchaseRequestForm.Designer.cs">
+      <DependentUpon>PurchaseRequestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\PurchaseOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\PurchaseOrderForm.Designer.cs">
+      <DependentUpon>PurchaseOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\PurchaseOrderListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\PurchaseOrderListForm.Designer.cs">
+      <DependentUpon>PurchaseOrderListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\ServerConnectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\ServerConnectionForm.designer.cs">
+      <DependentUpon>ServerConnectionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\SuppliersListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\SuppliersListForm.designer.cs">
+      <DependentUpon>SuppliersListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\SubCategoryListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\SubCategoryListForm.designer.cs">
+      <DependentUpon>SubCategoryListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\SubCategoryDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\SubCategoryDetailForm.designer.cs">
+      <DependentUpon>SubCategoryDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\SupplierDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\SupplierDetailForm.designer.cs">
+      <DependentUpon>SupplierDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\SettingsDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\SettingsDetailForm.designer.cs">
+      <DependentUpon>SettingsDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectForms\SettingsListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectForms\SettingsListForm.designer.cs">
+      <DependentUpon>SettingsListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectReports\ItemBarcodeReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProjectReports\ItemBarcodeReport.Designer.cs">
+      <DependentUpon>ItemBarcodeReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectReports\PurchaseOrderReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProjectReports\PurchaseOrderReport.Designer.cs">
+      <DependentUpon>PurchaseOrderReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\AAServerCon.cs" />
+    <Compile Include="Services\ItemService.cs" />
+    <Compile Include="Services\PurshaseOrderService.cs" />
+    <Compile Include="Services\SupplierService.cs" />
+    <Compile Include="Services\SubCategoryService.cs" />
+    <Compile Include="Services\SettingService.cs" />
+    <Compile Include="Services\TransactionServices.cs" />
+    <Compile Include="Services\ValueListClass.cs" />
+    <Compile Include="Services\Warehouse.cs" />
+    <EmbeddedResource Include="ProjectForms\ItemSuppliersForm.resx">
+      <DependentUpon>ItemSuppliersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\MainCategoryListForm.resx">
+      <DependentUpon>MainCategoryListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\ItemsListForm.resx">
+      <DependentUpon>ItemsListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\ItemsDetailForm.resx">
+      <DependentUpon>ItemsDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\MainForm1.resx">
+      <DependentUpon>MainForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\PoListItemsForm.resx">
+      <DependentUpon>PoListItemsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\PurchaseApprovalListForm.resx">
+      <DependentUpon>PurchaseApprovalListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\PurchaseApproveForm.resx">
+      <DependentUpon>PurchaseApproveForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\PurchaseDeliveryReceiveForm.resx">
+      <DependentUpon>PurchaseDeliveryReceiveForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\PurchaseDeliveryReceiveFromOrderForm.resx">
+      <DependentUpon>PurchaseDeliveryReceiveFromOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\PurchaseDeliveryReceiveListForm1.resx">
+      <DependentUpon>PurchaseDeliveryReceiveListForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\PurchaseDeliveryReceiveListForm.resx">
+      <DependentUpon>PurchaseDeliveryReceiveListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\PurchaseOrderListForm1.resx">
+      <DependentUpon>PurchaseOrderListForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\PurchaseRequestApprovedListForm.resx">
+      <DependentUpon>PurchaseRequestApprovedListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\PurchaseRequestListForm1.resx">
+      <DependentUpon>PurchaseRequestListForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\StockCountDetailForm.resx">
+      <DependentUpon>StockCountDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\StockCountForm.resx">
+      <DependentUpon>StockCountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\StockCountListForm.resx">
+      <DependentUpon>StockCountListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\StockRequestDeliveryForm.resx">
+      <DependentUpon>StockRequestDeliveryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\StockRequestDeliveryListForm.resx">
+      <DependentUpon>StockRequestDeliveryListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\StockWasteListForm.resx">
+      <DependentUpon>StockWasteListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\StockWasteForm.resx">
+      <DependentUpon>StockWasteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\StockRequestListForm.resx">
+      <DependentUpon>StockRequestListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\StockRequestForm.resx">
+      <DependentUpon>StockRequestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\WarehouseStockTransferListForm.resx">
+      <DependentUpon>WarehouseStockTransferListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\WarehouseStockTransferForm.resx">
+      <DependentUpon>WarehouseStockTransferForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\PurchaseReturnListForm.resx">
+      <DependentUpon>PurchaseReturnListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\PurchaseReturnForm.resx">
+      <DependentUpon>PurchaseReturnForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\PurchaseRequestListForm.resx">
+      <DependentUpon>PurchaseRequestListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\PurchaseRequestForm.resx">
+      <DependentUpon>PurchaseRequestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\PurchaseOrderForm.resx">
+      <DependentUpon>PurchaseOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\PurchaseOrderListForm.resx">
+      <DependentUpon>PurchaseOrderListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\ServerConnectionForm.resx">
+      <DependentUpon>ServerConnectionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\SuppliersListForm.resx">
+      <DependentUpon>SuppliersListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\SubCategoryListForm.resx">
+      <DependentUpon>SubCategoryListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\SubCategoryDetailForm.resx">
+      <DependentUpon>SubCategoryDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\SupplierDetailForm.resx">
+      <DependentUpon>SupplierDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\SettingsDetailForm.resx">
+      <DependentUpon>SettingsDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectForms\SettingsListForm.resx">
+      <DependentUpon>SettingsListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectReports\ItemBarcodeReport.resx">
+      <DependentUpon>ItemBarcodeReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectReports\PurchaseOrderReport.resx">
+      <DependentUpon>PurchaseOrderReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Today.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tomorrow.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NextWeek.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ThisWeek.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CustomDate.svg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
